@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Gift Idea Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c34c43428e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="title__bar">
+        <div class="title__bar__container">
+            <a id="titleBarLogo">
+                <i class="fa fa-gift"></i> 
+                AI Gift Idea Generator 
+                <i class="fa fa-gift"></i> 
+            </a>
+        </div>
+    </div>
+    <div class="introduction">
+        <h1 id="introductionText">Answer a few simple questions to find the perfect gift to buy for someone!</h1>
+    </div>
+    <div class="question__container">
+        <h1 class="question__title">Who is the gift for?</h1>
+        <input class="question__box" type="text" placeholder="Mother, spouse, brother, best friend..." id="boxOne"/>
+        <h2 class="question__title">How old are they?</h2>
+        <input class="question__box" type="text" placeholder="58 years old, 35 years old, 27 years old..." id="boxTwo"/>
+        <h3 class="question__title">How much are you wanting to spend?</h3>
+        <input class="question__box" type="text" placeholder="Under $100, between $10 and $50, any amount..." id="boxThree"/>
+        <h4 class="question__title">What is the occasion?</h4>
+        <input class="question__box" type="text" placeholder="Christmas, birthday, anniversary, graduation..." id="boxFour"/>
+        <h5 class="question__title">What are their hobbies or interests?</h5>
+        <input class="question__box" type="text" placeholder="Skiing, golfing, reading, video games..." id="boxFive"/>
+        <li class="start__btn">
+            <a href="/" class="generate__button" id="generateGiftsBtn"> Generate Gift Ideas! </a>
+        </li>
+    </div>
+    <div id="loadingScreen" class="loading__screen">
+        <div class="loading__content"></div>
+        <div class="loading__animation"></div>
+    </div>
+
+    <div id="giftIdeasContainer">
+        <div id="giftIdeasBox">
+            <pre id="giftIdeasContent"></pre>
+            <button onclick="hideGiftIdeasContainer()" id="giftIdeasClose">&times;</button>
+            <ul id="giftIdeasLinksContent"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
